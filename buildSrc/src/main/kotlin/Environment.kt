@@ -5,6 +5,8 @@
  * Profile:
  */
 object Environment {
+    val isRelease = false
+
     val namespace = "com.chen.koki"
     val compileSdk = 33
 
@@ -12,7 +14,7 @@ object Environment {
     val targetSdk = 33
     val versionCode = 1
     val versionName = "1.0"
-    
+
     val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
     object AppId{

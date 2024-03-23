@@ -33,6 +33,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("src/main/AndroidManifest.xml")
+        }
+    }
 }
 
 dependencies {
@@ -44,4 +50,9 @@ dependencies {
     testImplementation(AndroidX.junit.junit)
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
+
+    //依附app壳
+    if (Environment.isRelease) {
+
+    }
 }
