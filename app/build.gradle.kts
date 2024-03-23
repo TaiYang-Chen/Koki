@@ -4,17 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "com.chen.koki"
-    compileSdk = 33
+    namespace = Environment.namespace
+    compileSdk = Environment.compileSdk
 
     defaultConfig {
-        applicationId = "com.chen.koki"
-        minSdk = 25
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Environment.AppId.applicationId
+        minSdk = Environment.minSdk
+        targetSdk = Environment.targetSdk
+        versionCode = Environment.versionCode
+        versionName = Environment.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Environment.testInstrumentationRunner
     }
 
     buildTypes {
@@ -33,15 +33,26 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("src/main/AndroidManifest.xml")
+        }
+    }
 }
 
 dependencies {
+    implementation(AndroidX.core)
+    implementation(AndroidX.appcompat)
+    implementation(AndroidX.constraintlayout)
+    implementation(Google.material)
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(AndroidX.junit.junit)
+    androidTestImplementation(AndroidX.junit.testExt)
+    androidTestImplementation(AndroidX.junit.testEspresso)
+
+    //依附app壳
+    if (Environment.isRelease) {
+
+    }
 }
