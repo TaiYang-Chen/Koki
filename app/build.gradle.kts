@@ -1,10 +1,11 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
-    namespace = Environment.namespace
+    namespace = Environment.namespaces.app
     compileSdk = Environment.compileSdk
 
     defaultConfig {
@@ -38,6 +39,10 @@ android {
         getByName("main") {
             manifest.srcFile("src/main/AndroidManifest.xml")
         }
+    }
+
+    buildFeatures{
+        dataBinding = true
     }
 }
 
