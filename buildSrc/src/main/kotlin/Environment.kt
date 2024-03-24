@@ -7,7 +7,6 @@
 object Environment {
     val isRelease = false
 
-    val namespace = "com.chen.koki"
     val compileSdk = 33
 
     val minSdk = 25
@@ -19,5 +18,10 @@ object Environment {
 
     object AppId{
         val applicationId = "com.chen.koki"
+    }
+
+    object namespaces{
+        val app = "com.chen.koki"
+        val base = "com.chen.base"
     }
 }
