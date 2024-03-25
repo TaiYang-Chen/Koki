@@ -56,6 +56,7 @@ dependencies {
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
 
+    implementation(project(mapOf("path" to ":base")))
     //依附app壳
     if (Environment.isRelease) {
 
