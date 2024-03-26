@@ -56,6 +56,9 @@ dependencies {
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
 
+    implementation("com.tencent:mmkv:1.3.4")
+    implementation("com.github.zhpanvip:BannerViewPager:3.1.5")
+
     implementation(project(mapOf("path" to ":base")))
     //依附app壳
     if (Environment.isRelease) {
