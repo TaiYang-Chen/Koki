@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "Koki"
 include(":app")
 include(":base")
+include(":main")
+include(":login")

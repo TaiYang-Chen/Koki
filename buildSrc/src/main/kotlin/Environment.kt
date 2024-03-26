@@ -23,5 +23,7 @@ object Environment {
     object namespaces{
         val app = "com.chen.koki"
         val base = "com.chen.base"
+        val main = "com.chen.main"
+        val login = "com.chen.login"
     }
 }
