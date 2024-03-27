@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = Environment.namespaces.base
+    namespace = Environment.namespaces.main
     compileSdk = Environment.compileSdk
 
     defaultConfig {
