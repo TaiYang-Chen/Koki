@@ -1,9 +1,13 @@
 package com.chen.koki.ui.guide
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import androidx.viewpager2.widget.ViewPager2
 import com.chen.base.activity.BaseActivity
+import com.chen.base.ext.fixSystemUI
 import com.chen.base.ext.gone
 import com.chen.base.ext.visible
 import com.chen.base.vm.BaseViewModel
@@ -32,6 +36,9 @@ class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
     )
 
     override fun initView(savedInstanceState: Bundle?) {
+
+        fixSystemUI()
+
         mDatabind.proxy = ProxyClick()
 
         welcomeGuide = findViewById(R.id.welcome_guide)
