@@ -1,6 +1,8 @@
 package com.chen.base.ext
 
 import android.view.View
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 
 /**
  * Author: Chen
@@ -15,4 +17,8 @@ fun View.visible() {
 
 fun View.gone() {
     visibility = View.GONE
+}
+
+fun ImageView.setDrawable(data: Int) {
+    setImageDrawable(ContextCompat.getDrawable(context, data))
 }

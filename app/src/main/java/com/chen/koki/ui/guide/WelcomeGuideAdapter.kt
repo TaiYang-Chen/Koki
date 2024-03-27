@@ -11,7 +11,7 @@ import com.zhpan.bannerview.BaseBannerAdapter
  * Profile:
  */
 
-class WelcomeGuideAdapter : BaseBannerAdapter<String, WelcomeGuideViewHolder>() {
+class WelcomeGuideAdapter : BaseBannerAdapter<Int, WelcomeGuideViewHolder>() {
 
     override fun getLayoutId(viewType: Int): Int {
         return R.layout.banner_itemwelcome
@@ -22,11 +22,11 @@ class WelcomeGuideAdapter : BaseBannerAdapter<String, WelcomeGuideViewHolder>() 
     }
 
     override fun onBind(
-        holder: WelcomeGuideViewHolder?,
-        data: String?,
+        holder: WelcomeGuideViewHolder,
+        data: Int,
         position: Int,
         pageSize: Int
     ) {
-        holder?.bindData(data, position, pageSize);
+        holder.bindData(data, position, pageSize);
     }
 }

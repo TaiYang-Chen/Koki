@@ -16,6 +16,14 @@ object CacheUtil {
      */
     fun isFirst(): Boolean {
         val kv = MMKV.mmkvWithID("app")
-        return kv.decodeBool("frst", true)
+        return kv.decodeBool("first", true)
+    }
+
+    /**
+     * 是否是第一次打开app
+     */
+    fun setFirst(first: Boolean): Boolean {
+        val kv = MMKV.mmkvWithID("app")
+        return kv.encode("first", first)
     }
 }
