@@ -60,8 +60,10 @@ dependencies {
     implementation("com.github.zhpanvip:BannerViewPager:3.1.5")
 
     implementation(project(mapOf("path" to ":base")))
-    //依附app壳
-    if (Environment.isRelease) {
 
+    //依附app壳
+    if (!Environment.isRelease) {
+        implementation(project(mapOf("path" to ":login")))
+        implementation(project(mapOf("path" to ":main")))
     }
 }
