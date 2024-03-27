@@ -43,6 +43,7 @@ dependencies {
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintlayout)
     implementation(Google.material)
+    implementation(project(mapOf("path" to ":base")))
 
     testImplementation(AndroidX.junit.junit)
     androidTestImplementation(AndroidX.junit.testExt)
