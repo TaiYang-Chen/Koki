@@ -15,19 +15,6 @@
         android:layout_height="match_parent"
         tools:context=".ui.guide.GuideActivity">
 
-        <TextView
-            android:id="@+id/welcome_join"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:background="@color/white"
-            android:onClick="@{()->proxy.toMain()}"
-            android:text="立即进入"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/welcome_guide" />
-
         <com.zhpan.bannerview.BannerViewPager
             android:id="@+id/welcome_guide"
             android:layout_width="0dp"
@@ -46,5 +33,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <TextView
+            android:id="@+id/welcome_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="@color/white"
+            android:onClick="@{()->proxy.toMain()}"
+            android:text="立即进入"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/welcome_guide" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
