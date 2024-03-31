@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.Koki" parent="Base.Theme.Koki" />
+
+    <style name="GuideStyle" parent="Theme.Koki" >
+        <item name="android:windowBackground">@drawable/image_guide_1</item>
+    </style>
 </resources>
