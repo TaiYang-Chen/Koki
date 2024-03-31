@@ -16,7 +16,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("boolean", "isRelease", Environment.isRelease.toString())
+        }
         release {
+            buildConfigField("boolean", "isRelease", Environment.isRelease.toString())
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -34,6 +38,7 @@ android {
 
     buildFeatures{
         dataBinding = true
+        buildConfig = true
     }
 }
 
