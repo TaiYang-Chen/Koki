@@ -1,8 +1,13 @@
 package com.chen.base.ext
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
 import android.view.View
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import androidx.databinding.BindingAdapter
+import androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable
 
 /**
  * Author: Chen

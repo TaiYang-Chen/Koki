@@ -28,18 +28,18 @@
             android:id="@+id/welcome_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@drawable/image_guide_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
+        <Button
             android:id="@+id/welcome_join"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:background="@color/white"
             android:onClick="@{()->proxy.toMain()}"
             android:text="立即进入"
             android:visibility="gone"

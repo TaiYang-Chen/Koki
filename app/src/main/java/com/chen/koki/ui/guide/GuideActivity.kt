@@ -13,6 +13,8 @@ import com.chen.koki.databinding.ActivityGuideBinding
 import com.chen.koki.util.CacheUtil
 import com.chen.main.MainActivity
 import com.zhpan.bannerview.BannerViewPager
+import com.zhpan.indicator.enums.IndicatorSlideMode
+import com.zhpan.indicator.enums.IndicatorStyle
 
 /**
  * Author: Chen
@@ -47,6 +49,12 @@ class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
                 setAutoPlay(false)
                 setCanLoop(false)
 
+                setPageTransformer(DepthPageTransformer())
+                setIndicatorStyle(IndicatorStyle.ROUND_RECT)
+                setIndicatorSlideMode(IndicatorSlideMode.WORM)
+                setIndicatorSliderGap(80)
+                setIndicatorSliderRadius(80)
+
                 setLifecycleRegistry(lifecycle)
                 registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                     override fun onPageSelected(position: Int) {
@@ -64,11 +72,12 @@ class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
         } else {
             mDatabind.welcomeImage.visible()
             mDatabind.welcomeGuide.postDelayed({
+                startActivity(Intent(this@GuideActivity, MainActivity::class.java))
                 //跳转
                 finish()
                 //带点渐变动画
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            }, 300)
+            }, 700)
         }
     }
 
