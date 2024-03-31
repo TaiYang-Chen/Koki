@@ -1,9 +1,11 @@
 package com.chen.koki.ui.guide
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.chen.base.activity.BaseActivity
+import com.chen.base.arouter.BaseARouter.goMain
 import com.chen.base.ext.fixSystemUI
 import com.chen.base.ext.gone
 import com.chen.base.ext.visible
@@ -11,7 +13,6 @@ import com.chen.base.vm.BaseViewModel
 import com.chen.koki.R
 import com.chen.koki.databinding.ActivityGuideBinding
 import com.chen.koki.util.CacheUtil
-import com.chen.main.MainActivity
 import com.zhpan.bannerview.BannerViewPager
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
@@ -23,6 +24,7 @@ import com.zhpan.indicator.enums.IndicatorStyle
  * Profile:
  */
 
+@Route(path = "/app/guideActivity")
 class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
 
     private lateinit var welcomeGuide: BannerViewPager<Int, WelcomeGuideViewHolder>
@@ -72,8 +74,8 @@ class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
         } else {
             mDatabind.welcomeImage.visible()
             mDatabind.welcomeGuide.postDelayed({
-                startActivity(Intent(this@GuideActivity, MainActivity::class.java))
                 //跳转
+                goMain()
                 finish()
                 //带点渐变动画
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -84,7 +86,7 @@ class GuideActivity : BaseActivity<BaseViewModel, ActivityGuideBinding>() {
     inner class ProxyClick {
         fun toMain() {
             CacheUtil.setFirst(false)
-            startActivity(Intent(this@GuideActivity, MainActivity::class.java))
+            goMain()
             finish()
             //带点渐变动画
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
