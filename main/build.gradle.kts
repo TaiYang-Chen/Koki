@@ -13,6 +13,12 @@ android {
 
         testInstrumentationRunner = Environment.testInstrumentationRunner
         consumerProguardFiles("consumer-rules.pro")
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.name)
+            }
+        }
     }
 
     buildTypes {
@@ -43,9 +49,13 @@ dependencies {
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintlayout)
     implementation(Google.material)
-    implementation(project(mapOf("path" to ":base")))
 
     testImplementation(AndroidX.junit.junit)
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
+
+    implementation(ThirdParty.arouterApi)
+    kapt(ThirdParty.arouterCompiler)
+
+    implementation(project(mapOf("path" to ":base")))
 }

@@ -47,4 +47,6 @@ dependencies {
     testImplementation(AndroidX.junit.junit)
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
+
+    implementation(ThirdParty.arouterApi)
 }
