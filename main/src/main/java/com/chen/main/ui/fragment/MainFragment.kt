@@ -6,7 +6,10 @@ import com.chen.base.vm.BaseViewModel
 import com.chen.main.databinding.FragmentMainBinding
 
 /**
- * create by chenta on 2023/10/20
+ * Author: Chen
+ * Email: 1563011912@qq.com
+ * Create Date: 2024/3/26
+ * Profile:
  */
 class MainFragment : BaseFragment<BaseViewModel, FragmentMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {

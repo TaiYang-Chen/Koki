@@ -8,6 +8,12 @@ import androidx.databinding.ViewDataBinding
 import com.chen.base.ext.inflateBindingWithGeneric
 import com.chen.base.vm.BaseViewModel
 
+/**
+ * Author: Chen
+ * Email: 1563011912@qq.com
+ * Create Date: 2024/3/26
+ * Profile:
+ */
 abstract class BaseVmDbFragment<VM : BaseViewModel, DB : ViewDataBinding> : BaseVmFragment<VM>() {
 
     override fun setLayout() = 0

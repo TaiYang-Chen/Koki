@@ -11,6 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.chen.base.ext.getGenericClazz
 import com.chen.base.vm.BaseViewModel
 
+/**
+ * Author: Chen
+ * Email: 1563011912@qq.com
+ * Create Date: 2024/3/26
+ * Profile:
+ */
 abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
 
     lateinit var viewModel: VM
