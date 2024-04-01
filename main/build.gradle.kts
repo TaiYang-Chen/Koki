@@ -48,6 +48,10 @@ dependencies {
     implementation(AndroidX.core)
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintlayout)
+
+    implementation(AndroidX.navigationFragment)
+    implementation(AndroidX.navigationUI)
+
     implementation(Google.material)
 
     testImplementation(AndroidX.junit.junit)

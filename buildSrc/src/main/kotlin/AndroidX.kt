@@ -9,6 +9,10 @@ object AndroidX {
     val appcompat = "androidx.appcompat:appcompat:1.6.1"
     val constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:2.3.5"
+    const val navigationUI = "androidx.navigation:navigation-ui-ktx:2.3.5"
+
     object junit {
         val junit = "junit:junit:4.13.2"
         val testExt = "androidx.test.ext:junit:1.1.5"
