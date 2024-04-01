@@ -16,6 +16,12 @@ android {
         versionName = Environment.versionName
 
         testInstrumentationRunner = Environment.testInstrumentationRunner
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -56,11 +62,13 @@ dependencies {
     androidTestImplementation(AndroidX.junit.testExt)
     androidTestImplementation(AndroidX.junit.testEspresso)
 
-    implementation("com.tencent:mmkv:1.3.4")
-    implementation("com.github.zhpanvip:BannerViewPager:3.1.5")
+    implementation(ThirdParty.mmkv)
+    implementation(ThirdParty.bannerViewPager)
+
+    implementation(ThirdParty.arouterApi)
+    kapt(ThirdParty.arouterCompiler)
 
     implementation(project(mapOf("path" to ":base")))
-
     //依附app壳
     if (!Environment.isRelease) {
         implementation(project(mapOf("path" to ":login")))
