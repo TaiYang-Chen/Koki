@@ -71,6 +71,7 @@ dependencies {
 
     implementation(AndroidX.navigationFragment)
     implementation(AndroidX.navigationUI)
+    implementation(AndroidX.navigationRuntime)
 
     implementation(Google.material)
 
@@ -80,6 +81,8 @@ dependencies {
 
     implementation(ThirdParty.arouterApi)
     kapt(ThirdParty.arouterCompiler)
+
+    implementation(ThirdParty.lottie)
 
     implementation(project(mapOf("path" to ":base")))
 }

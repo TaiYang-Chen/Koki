@@ -1,8 +1,10 @@
 package com.chen.main.ui.fragment
 
 import android.os.Bundle
+import com.chen.base.ext.findNavControllerById
 import com.chen.base.fragment.BaseFragment
 import com.chen.base.vm.BaseViewModel
+import com.chen.main.R
 import com.chen.main.databinding.FragmentMainBinding
 
 /**
@@ -13,6 +15,10 @@ import com.chen.main.databinding.FragmentMainBinding
  */
 class MainFragment : BaseFragment<BaseViewModel, FragmentMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
-
+        mDatabind.mainFragmentBtv.initBottomNavigationView(
+            findNavControllerById(R.id.main_fragment_fragment), listOf(
+                "home.json" to "首页"
+            )
+        )
     }
 }

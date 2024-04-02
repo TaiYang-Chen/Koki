@@ -10,10 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:text="MainPage"
+        <fragment
+            android:id="@+id/main_fragment_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/main_fragment_navigation" />
+
+        <com.chen.main.view.LottieBottomNavigationView
+            android:id="@+id/main_fragment_btv"
+            android:layout_width="match_parent"
+            android:background="#Fff8f8f8"
+            app:itemTextAppearanceActive="@style/HomeLottieBottom"
+            app:itemTextAppearanceInactive="@style/HomeLottieBottom"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -54,4 +54,9 @@ dependencies {
     androidTestImplementation(AndroidX.junit.testEspresso)
 
     implementation(ThirdParty.arouterApi)
+
+    implementation(AndroidX.navigationFragment)
+    implementation(AndroidX.navigationUI)
+    implementation(AndroidX.navigationRuntime)
+
 }
