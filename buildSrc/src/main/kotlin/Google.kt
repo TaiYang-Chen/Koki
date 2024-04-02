@@ -5,5 +5,5 @@
  * Profile:
  */
 object Google {
-    val material = "com.google.android.material:material:1.8.0"
+    const val material = "com.google.android.material:material:1.8.0"
 }
