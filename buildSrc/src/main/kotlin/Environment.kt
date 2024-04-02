@@ -18,6 +18,7 @@ object Environment {
 
     object AppId{
         const val applicationId = "com.chen.koki"
+        const val main = "com.chen.main"
     }
 
     object namespaces{
@@ -26,4 +27,8 @@ object Environment {
         const val main = "com.chen.main"
         const val login = "com.chen.login"
     }
+
+    const val AROUTER_MODULE_NAME = "AROUTER_MODULE_NAME"
+    const val manifestDebugPath = "src/main/AndroidManifestDebug.xml"
+    const val manifestReleasePath = "src/main/AndroidManifestRelease.xml"
 }

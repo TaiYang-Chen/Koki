@@ -19,7 +19,7 @@ android {
 
         kapt {
             arguments {
-                arg("AROUTER_MODULE_NAME", project.getName())
+                arg(Environment.AROUTER_MODULE_NAME, project.name)
             }
         }
     }

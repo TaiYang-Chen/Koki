@@ -1,5 +1,9 @@
 plugins {
-    id("com.android.library")
+    if (Environment.isRelease) {
+        id("com.android.library")
+    } else {
+        id("com.android.application")
+    }
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
 }
@@ -11,12 +15,18 @@ android {
     defaultConfig {
         minSdk = Environment.minSdk
 
+        if (!Environment.isRelease) {
+            applicationId = Environment.AppId.main
+            targetSdk = Environment.targetSdk
+            versionCode = Environment.versionCode
+            versionName = Environment.versionName
+        }
+
         testInstrumentationRunner = Environment.testInstrumentationRunner
-        consumerProguardFiles("consumer-rules.pro")
 
         kapt {
             arguments {
-                arg("AROUTER_MODULE_NAME", project.name)
+                arg(Environment.AROUTER_MODULE_NAME, project.name)
             }
         }
     }
@@ -38,7 +48,17 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
+    sourceSets {
+        getByName("main") {
+            if (Environment.isRelease) {
+                manifest.srcFile(Environment.manifestReleasePath)
+            } else {
+                manifest.srcFile(Environment.manifestDebugPath)
+            }
+        }
+    }
+
+    buildFeatures {
         dataBinding = true
     }
 }
