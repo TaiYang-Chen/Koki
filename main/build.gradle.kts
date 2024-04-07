@@ -65,6 +65,21 @@ android {
 
 dependencies {
 
+    implementation(project(mapOf("path" to ":base")))
+
+    implementation(project(mapOf("path" to ":refresh-footer")))
+    implementation(project(mapOf("path" to ":refresh-header")))
+    implementation(project(mapOf("path" to ":refresh-layout")))
+
+    implementation(project(mapOf("path" to ":refresh-drawable-path")))
+    implementation(project(mapOf("path" to ":refresh-layout-kernel")))
+    implementation(project(mapOf("path" to ":refresh-header-classics")))
+    implementation(project(mapOf("path" to ":refresh-header-radar")))
+    implementation(project(mapOf("path" to ":refresh-header-falsify")))
+    implementation(project(mapOf("path" to ":refresh-header-material")))
+    implementation(project(mapOf("path" to ":refresh-header-two-level")))
+    implementation(project(mapOf("path" to ":refresh-footer-ball")))
+
     implementation(AndroidX.core)
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintlayout)
@@ -84,5 +99,7 @@ dependencies {
 
     implementation(ThirdParty.lottie)
 
-    implementation(project(mapOf("path" to ":base")))
+    implementation ("com.github.czy1121:loadinglayout:1.0.1")
+
+    implementation(ThirdParty.bannerViewPager)
 }
