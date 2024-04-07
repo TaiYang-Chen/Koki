@@ -25,10 +25,10 @@
         <com.chen.main.view.LottieBottomNavigationView
             android:id="@+id/main_fragment_btv"
             android:layout_width="match_parent"
+            android:layout_height="51dp"
             android:background="#Fff8f8f8"
             app:itemTextAppearanceActive="@style/HomeLottieBottom"
             app:itemTextAppearanceInactive="@style/HomeLottieBottom"
-            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
