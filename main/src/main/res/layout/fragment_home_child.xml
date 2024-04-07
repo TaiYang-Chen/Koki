@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ezy.ui.layout.LoadingLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableFooterFollowWhenLoadFinished="true"
+                app:srlEnableScrollContentWhenLoaded="true">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:background="#FFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#FF0000"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#8BC34A"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#673AB7"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#00BCD4"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#3F51B5"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#00BCD4"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#8BC34A"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#FFC107"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                        <LinearLayout
+                            android:background="#00BCD4"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </ezy.ui.layout.LoadingLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
