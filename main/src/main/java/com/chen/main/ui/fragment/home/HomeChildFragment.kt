@@ -1,11 +1,10 @@
 package com.chen.main.ui.fragment.home
 
 import android.os.Bundle
-import com.chen.base.ext.setupFragment
 import com.chen.base.fragment.BaseFragment
 import com.chen.base.vm.BaseViewModel
-import com.chen.main.R
-import com.chen.main.databinding.FragmentHomeBinding
+import com.chen.main.databinding.FragmentHomeChildBinding
+
 
 /**
  * Author: Chen
@@ -13,9 +12,8 @@ import com.chen.main.databinding.FragmentHomeBinding
  * Create Date: 2024/3/26
  * Profile:
  */
-class HomeFragment : BaseFragment<BaseViewModel, FragmentHomeBinding>() {
-
+class HomeChildFragment : BaseFragment<BaseViewModel, FragmentHomeChildBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
-        setupFragment(R.id.homeChildFragment, HomeChildFragment::class.java)
+        mDatabind.loading.showContent()
     }
 }
