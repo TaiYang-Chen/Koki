@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">面板</string>
+    <string name="title_category">分类</string>
+    <string name="title_setting">我的</string>
+</resources>

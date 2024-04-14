@@ -15,10 +15,6 @@ import com.chen.main.databinding.FragmentMainBinding
  */
 class MainFragment : BaseFragment<BaseViewModel, FragmentMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
-        mDatabind.mainFragmentBtv.initBottomNavigationView(
-            findNavControllerById(R.id.main_fragment_fragment), listOf(
-                "home.json" to "首页"
-            )
-        )
+
     }
 }
